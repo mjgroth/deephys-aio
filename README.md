@@ -45,7 +45,7 @@ the same `.model` can be viewed together in order to compare the way a single ne
 
 Follow the demo here to extract neural activity that can be viewed in the app.
 
-<a href="https://colab.research.google.com/github/mjgroth/deephys/blob/master/Extract_Activations.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open Demo In Colab!"/></a>
+<a href="https://colab.research.google.com/github/mjgroth/deephys-aio/blob/master/Extract_Activations.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open Demo In Colab!"/></a>
 
 ## Usage Instructions
 
