@@ -71,9 +71,17 @@ pre-compiled app, please do the following:
 
 ## Development Instructions
 
+This is kotlin/gradle project. To compile and run from source requires JDK and gradle. If you have never worked on java or kotlin code before, you likely do not have them. There are multiple ways to install these.
+
+### Gradle
+
+Gradle is a JVM build system that is used to compile and execute the code. Gradle version 7.6 is recommended and installation instructions can be found [on the Gradle website](https://gradle.org/install/).
+
 ### JDK Setup
 
-JDK 17 is required: We recommend installing openjdk17 via [Homebrew](https://brew.sh/) with `brew install openjdk@17`.
+Depending how you install Gradle, it may come with JDK. However, you may need to install JDK separately.
+
+JDK 17 is recommended: We recommend installing openjdk17 via [Homebrew](https://brew.sh/) with `brew install openjdk@17`.
 Alternatively, JDK 17 corretto, which can be installed through IntelliJ, has worked for some users.
 
 ### Project Setup
@@ -85,6 +93,5 @@ Alternatively, JDK 17 corretto, which can be installed through IntelliJ, has wor
 
 ### Running From Source
 
-The main command is `./run_from_source.sh`. If experience any issues try to reset the settings and state
-with `./run_from_source.sh reset` and then try `./run_from_source.sh` again. Which JDK is used can be adjusted inside
-this script.
+The main command is `./gradlew :k:nn:deephys:run --stacktrace`. If experience any issues try to reset the settings and state
+with `./gradlew :k:nn:deephys:run --stacktrace --args="reset"` and then try the command above again.
