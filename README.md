@@ -78,7 +78,7 @@ Alternatively, JDK 17 corretto, which can be installed through IntelliJ, has wor
 
 ### Project Setup
 
-1. git clone `https://github.com/mjgroth/deephys-aio`
+1. `git clone https://github.com/mjgroth/deephys-aio`
 2. Run `./setup_project.sh`. This code does many things:
     - Automatically clones git submodules
     - Downloads other gradle files and places them inside of the top folder
