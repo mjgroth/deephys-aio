@@ -88,3 +88,15 @@
 [submodule "k/pref"]
 	path = k/pref
 	url = https://github.com/mgroth0/pref
+[submodule "k/hurricanefx"]
+	path = k/hurricanefx
+	url = https://github.com/mgroth0/hurricanefx
+[submodule "k/fx"]
+	path = k/fx
+	url = https://github.com/mgroth0/fx
+[submodule "k/kjlib"]
+	path = k/kjlib
+	url = https://github.com/mgroth0/kjlib
+[submodule "k/remote"]
+	path = k/remote
+	url = https://github.com/mgroth0/remote
