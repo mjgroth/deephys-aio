@@ -87,7 +87,6 @@ Alternatively, JDK 17 corretto, which can be installed through IntelliJ, has wor
 ### Project Setup
 
 1. `git clone --recurse-submodules https://github.com/mjgroth/deephys-aio`
-	- Note: We are currently experiences issues with git cloning. If it says you cannot clone because you need "write access", please try `brew install gh` and use `gh repo clone mjgroth/deephys-aio -- --recurse-submodules`
 2. `cd deephys-aio`
 3. Download our custom pre-compiled gradle library into the project folder
    - `curl https://gradle.nyc3.digitaloceanspaces.com//kbuild.zip --output kbuild.zip`
