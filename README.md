@@ -92,7 +92,7 @@ Alternatively, JDK 17 corretto, which can be installed through IntelliJ, has wor
    - `curl https://gradle.nyc3.digitaloceanspaces.com//kbuild.zip --output kbuild.zip`
    - `unzip kbuild.zip`
    - `rm kbuild.zip`
-   - At this point, the folder "libs" should be present inside of "deephys-aio". This is required for gradle to work.
+   - At this point, the folder "lib" should be present inside of "deephys-aio". This is required for gradle to work.
 
 ### Running From Source
 
