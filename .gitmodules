@@ -1,3 +1,90 @@
 [submodule "k/nn/deephys"]
 	path = k/nn/deephys
 	url = https://github.com/mjgroth/deephys.git
+[submodule "k/prim"]
+	path = k/prim
+	url = https://github.com/mgroth0/prim
+[submodule "k/lang"]
+	path = k/lang
+	url = https://github.com/mgroth0/lang
+[submodule "k/model"]
+	path = k/model
+	url = https://github.com/mgroth0/model
+[submodule "k/css"]
+	path = k/css
+	url = https://github.com/mgroth0/css
+[submodule "k/log"]
+	path = k/log
+	url = https://github.com/mgroth0/log
+[submodule "k/stream"]
+	path = k/stream
+	url = https://github.com/mgroth0/stream
+[submodule "k/collect"]
+	path = k/collect
+	url = https://github.com/mgroth0/collect
+[submodule "k/file"]
+	path = k/file
+	url = https://github.com/mgroth0/file
+[submodule "k/cbor"]
+	path = k/cbor
+	url = https://github.com/mgroth0/cbor
+[submodule "k/service"]
+	path = k/service
+	url = https://github.com/mgroth0/service
+[submodule "k/key"]
+	path = k/key
+	url = https://github.com/mgroth0/key
+[submodule "k/test"]
+	path = k/test
+	url = https://github.com/mgroth0/test
+[submodule "k/reflect"]
+	path = k/reflect
+	url = https://github.com/mgroth0/reflect
+[submodule "k/json"]
+	path = k/json
+	url = https://github.com/mgroth0/json
+[submodule "k/time"]
+	path = k/time
+	url = https://github.com/mgroth0/time
+[submodule "k/obs"]
+	path = k/obs
+	url = https://github.com/mgroth0/obs
+[submodule "k/math"]
+	path = k/math
+	url = https://github.com/mgroth0/math
+[submodule "k/async"]
+	path = k/async
+	url = https://github.com/mgroth0/async
+[submodule "k/caching"]
+	path = k/caching
+	url = https://github.com/mgroth0/caching
+[submodule "k/hotkey"]
+	path = k/hotkey
+	url = https://github.com/mgroth0/hotkey
+[submodule "k/color"]
+	path = k/color
+	url = https://github.com/mgroth0/color
+[submodule "k/http"]
+	path = k/http
+	url = https://github.com/mgroth0/http
+[submodule "k/conda"]
+	path = k/conda
+	url = https://github.com/mgroth0/conda
+[submodule "k/mstruct"]
+	path = k/mstruct
+	url = https://github.com/mgroth0/mstruct
+[submodule "k/auto"]
+	path = k/auto
+	url = https://github.com/mgroth0/auto
+[submodule "k/exec"]
+	path = k/exec
+	url = https://github.com/mgroth0/exec
+[submodule "k/sys"]
+	path = k/sys
+	url = https://github.com/mgroth0/sys
+[submodule "k/gui"]
+	path = k/gui
+	url = https://github.com/mgroth0/gui
+[submodule "k/pref"]
+	path = k/pref
+	url = https://github.com/mgroth0/pref
