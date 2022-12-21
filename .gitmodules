@@ -1,0 +1,3 @@
+[submodule "k/nn/deephys"]
+	path = k/nn/deephys
+	url = https://github.com/mjgroth/deephys.git
