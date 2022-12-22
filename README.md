@@ -86,11 +86,6 @@ Alternatively, JDK 17 corretto, which can be installed through IntelliJ, has wor
 
 1. `git clone --recurse-submodules https://github.com/mjgroth/deephys-aio`
 2. `cd deephys-aio`
-3. Download our custom pre-compiled gradle library into the project folder
-   - `curl https://gradle.nyc3.digitaloceanspaces.com//kbuild.zip --output kbuild.zip`
-   - `unzip kbuild.zip`
-   - `rm kbuild.zip`
-   - At this point, the folder "lib" should be present inside of "deephys-aio". This is required for gradle to work.
 
 ### Running From Source
 

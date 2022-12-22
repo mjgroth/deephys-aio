@@ -35,21 +35,38 @@ return "$group:$name:$version"
 }
 val depsSeen  = mutableListOf<Dep>()
 listOf("kbuild").forEach { gradleMod ->
-val kbuildLibsFolder  = sourceFile!!.parentFile.resolve("lib")
-classpath(fileTree(kbuildLibsFolder))
-val deps  =   kbuildLibsFolder.resolve("deps.txt").readLines().filter { it.isNotBlank() }.map {
-  val parts = it.split(":")
-  Dep(parts[0], parts[1], parts[2])
-}
-deps.forEach { dep ->
-depsSeen.firstOrNull { it.group == dep.group && it.name == dep.name }?.let {
-				require(it.version == dep.version) {
-				  "conflicting versions for ${dep.group}:${dep.name}"
-				}
-			  }?:  run {
-classpath(dep.toString())
-depsSeen += dep
- }
+val kbuildVersion  = "1671747680772"
+val mattCacheFolder  = rootDir.resolve(".gradle").resolve("matt")
+val downloadedKbuildVersionFile  = mattCacheFolder.resolve("kbuildVersion.txt")
+val kbuildLibsFolder  = mattCacheFolder.resolve("lib")
+val   = 
+val   = 
+if (!downloadedKbuildVersionFile.exists() || downloadedKbuildVersionFile.readText() != kbuildVersion) {
+println("Downloading Kbuild...")
+val kbuildURL = "https://matt-central.nyc3.digitaloceanspaces.com//kbuild/$kbuildVersion/kbuild.zip"
+println("opening connection...")
+val connection = uri(kbuildURL).toURL().openConnection()
+println("getting stream")
+val inputStream = connection.getInputStream()
+val kbuildZip = rootDir.resolve("kbuild.zip")
+if (mattCacheFolder.exists()) mattCacheFolder.deleteRecursively()
+println("maybe deleting old folders")
+if (kbuildZip.exists()) kbuildZip.delete()
+if (kbuildLibsFolder.exists()) kbuildZip.deleteRecursively()
+val outputStream = kbuildZip.outputStream()
+println("transferring bytes...")
+inputStream.transferTo(outputStream)
+println("closing streams")
+inputStream.close()
+outputStream.close()
+println("unzipping...")
+mattCacheFolder.mkdirs()
+val p = ProcessBuilder("unzip", kbuildZip.absolutePath, "-d", mattCacheFolder.absolutePath).start()
+p.waitFor()
+println("deleting ${kbuildZip.name}")
+kbuildZip.delete()
+println("done unzipping. Good to go!")
+downloadedKbuildVersionFile.writeText(kbuildVersion)	
 }
 }
 }
