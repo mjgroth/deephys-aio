@@ -39,8 +39,6 @@ val kbuildVersion  = "1671747680772"
 val mattCacheFolder  = rootDir.resolve(".gradle").resolve("matt")
 val downloadedKbuildVersionFile  = mattCacheFolder.resolve("kbuildVersion.txt")
 val kbuildLibsFolder  = mattCacheFolder.resolve("lib")
-val   = 
-val   = 
 if (!downloadedKbuildVersionFile.exists() || downloadedKbuildVersionFile.readText() != kbuildVersion) {
 println("Downloading Kbuild...")
 val kbuildURL = "https://matt-central.nyc3.digitaloceanspaces.com//kbuild/$kbuildVersion/kbuild.zip"
