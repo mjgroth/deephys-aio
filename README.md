@@ -49,6 +49,8 @@ Follow the demo here to extract neural activity that can be viewed in the app.
 
 [Read the Python API Documentation here](https://matt-groth-deephys.readthedocs-hosted.com/en/latest/)
 
+[![Documentation Status](https://readthedocs.com/projects/matt-groth-deephys/badge/?version=latest&token=993a0e6932110ddd9080ba7fea46fda458721f5293f465bbd55054b94e30f2d9)](https://matt-groth-deephys.readthedocs-hosted.com/en/latest/?badge=latest)
+
 ## Usage Instructions
 
 1. Load the `.model` file into the app
