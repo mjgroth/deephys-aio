@@ -20,6 +20,7 @@
   taskTreeVersion="2.1.0"
   jPackage="1.3.1"
   gradleIntelliJPlugin="1.11.0"
+  gradlePluginPublish="1.1.0"
   google-auth="1.8.1"
   python="3.10.4"
   jupiter="5.9.1"
@@ -329,6 +330,10 @@
     module="gradle.plugin.com.jprofiler:gradle_publish"
     [libraries.gradle-plugin-jprofiler.version]
       ref="jProfiler"
+  [libraries.gradle-plugin-pluginPublish]
+    module="com.gradle.publish:plugin-publish-plugin"
+    [libraries.gradle-plugin-pluginPublish.version]
+      ref="gradlePluginPublish"
   [libraries.google-api-client]
     module="com.google.api-client:google-api-client"
     version="1.33.0"
@@ -527,6 +532,10 @@
     id="com.jprofiler"
     [plugins.jProfiler.version]
       ref="jProfiler"
+  [plugins.pluginPublish]
+    id="com.gradle.plugin-publish"
+    [plugins.pluginPublish.version]
+      ref="gradlePluginPublish"
 [metadata]
   "org.jetbrains.kotlin:kotlin-gradle-plugin"=""
   "org.jetbrains.intellij.plugins:gradle-intellij-plugin"="org.jetbrains.intellij"
@@ -535,3 +544,4 @@
   "org.panteleyev:jpackage-gradle-plugin"="org.panteleyev.jpackageplugin"
   "com.dorongold.plugins:task-tree"="com.dorongold.task-tree"
   "org.jetbrains.kotlin:kotlin-serialization"="org.jetbrains.kotlin.plugin.serialization"
+  "com.gradle.publish:plugin-publish-plugin"="com.gradle.plugin-publish"
