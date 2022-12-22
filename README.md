@@ -47,6 +47,8 @@ Follow the demo here to extract neural activity that can be viewed in the app.
 
 <a href="https://colab.research.google.com/github/mjgroth/deephys-aio/blob/master/Extract_Activations.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open Demo In Colab!"/></a>
 
+[Read the Python API Documentation here](https://matt-groth-deephys.readthedocs-hosted.com/en/latest/)
+
 ## Usage Instructions
 
 1. Load the `.model` file into the app
