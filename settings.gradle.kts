@@ -66,6 +66,21 @@ kbuildZip.delete()
 println("done unzipping. Good to go!")
 downloadedKbuildVersionFile.writeText(kbuildVersion)	
 }
+classpath(fileTree(kbuildLibsFolder))
+val deps  =   kbuildLibsFolder.resolve("deps.txt").readLines().filter { it.isNotBlank() }.map {
+  val parts = it.split(":")
+  Dep(parts[0], parts[1], parts[2])
+}
+deps.forEach { dep ->
+depsSeen.firstOrNull { it.group == dep.group && it.name == dep.name }?.let {
+				require(it.version == dep.version) {
+				  "conflicting versions for ${dep.group}:${dep.name}"
+				}
+			  }?:  run {
+classpath(dep.toString())
+depsSeen += dep
+ }
+}
 }
 }
 }
