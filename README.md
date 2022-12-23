@@ -93,3 +93,5 @@ The main command is `./gradlew :k:nn:deephys:run --stacktrace`. If experience an
 with `./gradlew :k:nn:deephys:run --stacktrace --args="reset"` and then try the command above again.
 
 If you have never worked on a java project on your machine, you likely will get an error complaining about no JDK being found. There are a few ways you can handle this. One is to set your JAVA_HOME environmental variable e.g. `JAVA_HOME=/opt/homebrew/opt/openjdk@17 ./gradlew :k:nn:deephys:run`. Another is to append `org.gradle.java.home=/path/to/your/jdk/home` to your `~/.gradle/gradle.properties`. More information can be found in [Gradle documentation](https://docs.gradle.org/current/userguide/build_environment.html). 
+
+test edit 1
