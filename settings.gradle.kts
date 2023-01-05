@@ -35,35 +35,54 @@ return "$group:$name:$version"
 }
 val depsSeen  = mutableListOf<Dep>()
 listOf("kbuild").forEach { gradleMod ->
-val kbuildVersion  = "1672895596884"
+val kbuildVersion  = "1672899908564"
 val mattCacheFolder  = rootDir.resolve(".gradle").resolve("matt")
 val downloadedKbuildVersionFile  = mattCacheFolder.resolve("kbuildVersion.txt")
 val kbuildLibsFolder  = mattCacheFolder.resolve("lib")
 if (!downloadedKbuildVersionFile.exists() || downloadedKbuildVersionFile.readText() != kbuildVersion) {
-println("Downloading Kbuild...")
-val kbuildURL = "https://matt-central.nyc3.digitaloceanspaces.com//0/kbuild/$kbuildVersion/kbuild.zip"
-println("opening connection...")
-val connection = uri(kbuildURL).toURL().openConnection()
-println("getting stream")
-val inputStream = connection.getInputStream()
-val kbuildZip = rootDir.resolve("kbuild.zip")
-if (mattCacheFolder.exists()) mattCacheFolder.deleteRecursively()
-println("maybe deleting old folders")
-if (kbuildZip.exists()) kbuildZip.delete()
-if (kbuildLibsFolder.exists()) kbuildZip.deleteRecursively()
-val outputStream = kbuildZip.outputStream()
-println("transferring bytes...")
+  fun readBytesFromURL(url: String): ByteArray {
+val connection  = uri(url).toURL().openConnection()
+val inputStream  = connection.getInputStream()
+val outputStream  = ByteArrayOutputStream()
 inputStream.transferTo(outputStream)
-println("closing streams")
 inputStream.close()
 outputStream.close()
-println("unzipping...")
-mattCacheFolder.mkdirs()
-val p = ProcessBuilder("unzip", kbuildZip.absolutePath, "-d", mattCacheFolder.absolutePath).start()
-p.waitFor()
-println("deleting ${kbuildZip.name}")
-kbuildZip.delete()
-println("done unzipping. Good to go!")
+return outputStream.toByteArray()
+}
+println("maybe deleting old folders")
+if (mattCacheFolder.exists()) mattCacheFolder.deleteRecursively()
+kbuildLibsFolder.mkdirs()
+  
+println("Downloading Kbuild...")
+val kbuildURL = "https://matt-central.nyc3.digitaloceanspaces.com//1/kbuild/$kbuildVersion/files.lsv"
+println("getting list of raw files...")
+val rawFilesText = readBytesFromURL("https://matt-central.nyc3.digitaloceanspaces.com//1/kbuild/$kbuildVersion/files.lsv").decodeToString()
+println("getting list of refs...")
+val refsText = readBytesFromURL("https://matt-central.nyc3.digitaloceanspaces.com//1/kbuild/$kbuildVersion/refs.csv").decodeToString()
+
+
+println("downloading raw files...")
+
+
+rawFilesText.lines().forEach {
+	println("downloading " + it.trim() + "...")
+	val url = https://matt-central.nyc3.digitaloceanspaces.com//1/kbuild/$kbuildVersion/${it.trim()}
+	val os = kbuildLibsFolder.resolve(it.trim()).outputStream()
+	os.writeBytes(readBytesFromURL(url))
+	os.close()
+}
+refsText.lines().forEach {
+	val fileName = it.substringBefore(",")
+	val url = it.substringAfter(",")
+	println("downloading " + fileName + "...")
+	val os = kbuildLibsFolder.resolve(fileName).outputStream()
+	os.writeBytes(readBytesFromURL(url))
+	os.close()
+}
+
+
+
+println("Good to go!")
 downloadedKbuildVersionFile.writeText(kbuildVersion)	
 }
 classpath(fileTree(kbuildLibsFolder))
