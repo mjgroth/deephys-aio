@@ -35,7 +35,7 @@ return "$group:$name:$version"
 }
 val depsSeen  = mutableListOf<Dep>()
 listOf("kbuild").forEach { gradleMod ->
-val kbuildVersion  = "1672900364839"
+val kbuildVersion  = "1672900717829"
 val mattCacheFolder  = rootDir.resolve(".gradle").resolve("matt")
 val downloadedKbuildVersionFile  = mattCacheFolder.resolve("kbuildVersion.txt")
 val kbuildLibsFolder  = mattCacheFolder.resolve("lib")
@@ -66,7 +66,7 @@ rawFilesText.lines().forEach {
 	println("downloading " + it.trim() + "...")
 	val url = "https://matt-central.nyc3.digitaloceanspaces.com//1/kbuild/$kbuildVersion/${it.trim()}"
 	val os = kbuildLibsFolder.resolve(it.trim()).outputStream()
-	os.writeBytes(readBytesFromURL(url))
+	os.write(readBytesFromURL(url))
 	os.close()
 }
 refsText.lines().forEach {
@@ -74,7 +74,7 @@ refsText.lines().forEach {
 	val url = it.substringAfter(",")
 	println("downloading " + fileName + "...")
 	val os = kbuildLibsFolder.resolve(fileName).outputStream()
-	os.writeBytes(readBytesFromURL(url))
+	os.write(readBytesFromURL(url))
 	os.close()
 }
 
