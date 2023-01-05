@@ -35,7 +35,7 @@ return "$group:$name:$version"
 }
 val depsSeen  = mutableListOf<Dep>()
 listOf("kbuild").forEach { gradleMod ->
-val kbuildVersion  = "1672900090668"
+val kbuildVersion  = "1672900364839"
 val mattCacheFolder  = rootDir.resolve(".gradle").resolve("matt")
 val downloadedKbuildVersionFile  = mattCacheFolder.resolve("kbuildVersion.txt")
 val kbuildLibsFolder  = mattCacheFolder.resolve("lib")
@@ -43,11 +43,9 @@ if (!downloadedKbuildVersionFile.exists() || downloadedKbuildVersionFile.readTex
   fun readBytesFromURL(url: String): ByteArray {
 val connection  = uri(url).toURL().openConnection()
 val inputStream  = connection.getInputStream()
-val outputStream  = ByteArrayOutputStream()
-inputStream.transferTo(outputStream)
+val bytes  = inputStream.readAllBytes()
 inputStream.close()
-outputStream.close()
-return outputStream.toByteArray()
+return bytes
 }
 println("maybe deleting old folders")
 if (mattCacheFolder.exists()) mattCacheFolder.deleteRecursively()

@@ -84,7 +84,7 @@ Alternatively, JDK 17 corretto, which can be installed through IntelliJ, has wor
 
 ### Project Setup
 
-1. `git clone --recurse-submodules https://github.com/mjgroth/deephys-aio`
+1. `git clone --recurse-submodules -j10 https://github.com/mjgroth/deephys-aio`
 2. `cd deephys-aio`
 
 ### Running From Source
