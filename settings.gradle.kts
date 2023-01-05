@@ -35,13 +35,13 @@ return "$group:$name:$version"
 }
 val depsSeen  = mutableListOf<Dep>()
 listOf("kbuild").forEach { gradleMod ->
-val kbuildVersion  = "1672884108717"
+val kbuildVersion  = "1672895459574"
 val mattCacheFolder  = rootDir.resolve(".gradle").resolve("matt")
 val downloadedKbuildVersionFile  = mattCacheFolder.resolve("kbuildVersion.txt")
 val kbuildLibsFolder  = mattCacheFolder.resolve("lib")
 if (!downloadedKbuildVersionFile.exists() || downloadedKbuildVersionFile.readText() != kbuildVersion) {
 println("Downloading Kbuild...")
-val kbuildURL = "https://matt-central.nyc3.digitaloceanspaces.com//kbuild/$kbuildVersion/kbuild.zip"
+val kbuildURL = "https://matt-central.nyc3.digitaloceanspaces.com/0/kbuild/$kbuildVersion/kbuild.zip"
 println("opening connection...")
 val connection = uri(kbuildURL).toURL().openConnection()
 println("getting stream")

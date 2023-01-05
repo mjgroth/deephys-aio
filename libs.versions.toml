@@ -6,7 +6,7 @@
   kotlinx-html="0.8.0"
   kotlinx-serialization="1.4.1"
   xmlutil="0.84.3"
-  gradle="8.1-20230104234513+0000"
+  gradle="8.0-rc-1"
   gradleTooling="7.5.1"
   ktor="2.1.3"
   tf="0.4.0"
