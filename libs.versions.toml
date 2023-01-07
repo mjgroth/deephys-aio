@@ -232,6 +232,9 @@
   [libraries.svgsalamander]
     module="guru.nidi.com.kitfox:svgSalamander"
     version="1.1.3"
+  [libraries.batik]
+    module="org.apache.xmlgraphics:batik-all"
+    version="1.16"
   [libraries.tf-core-api]
     module="org.tensorflow:tensorflow-core-api"
     [libraries.tf-core-api.version]
