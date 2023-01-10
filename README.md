@@ -8,7 +8,7 @@ This is the code for the paper _________.
 
 1. 📖 Watch crash course on how to use Deephys
 2. Install [precompiled](https://github.com/mjgroth/deephys-aio/edit/master/README.md#precompiled-app-installation) 😎 app
-3. 🔥 [Learn](https://github.com/mjgroth/deephys-aio/edit/master/README.md#-neural-activity-extraction-) how to store neural activity for deephys visualization
+3. 🔥 [Learn](https://github.com/mjgroth/deephys-aio/edit/master/README.md#-neural-activity-extraction-) to extract neural activity for deephys
 4. 🥳 Let's deephys
 
 
@@ -37,9 +37,7 @@ There is currently no pre-compiled release for linux. Please see [Development In
 ### I am feeling lazy 🥱, give me some neural activity
  
 [This Google Drive folder](https://drive.google.com/drive/folders/1755Srmf39sBMjWa_1lEpS-FPo1ANCWFV) contains
-sub-folders which each contain a set of data files that can be used together. At a minimum, the app requires
-one `.model` and at least one `.test` file that correspond to each other. Multiple `.test` files that all correspond to
-the same `.model` can be viewed together in order to compare the way a single network behaves with different test sets.
+sub-folders with different datasets and networks. Select one `.model` and visualize several `.test` files that correspond to different distributions. 
 
 [//]: # (from Google Drive)
 
@@ -51,13 +49,31 @@ the same `.model` can be viewed together in order to compare the way a single ne
 
 ### This is not hard for me 🤓, let's extract neural activity for deephys 
 
-Follow the demo here to extract neural activity that can be viewed in the app.
+First, extract all the activity and images (size 32x32 pixels) using your favourite ML library. Exporting them to deephys is as simple as this:
 
-<a href="https://colab.research.google.com/github/mjgroth/deephys-aio/blob/master/Python_Tutorial.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open Demo In Colab!"/></a>
+```python
+import deephys
+test = deephys.import_test_data(
+    name = "CIFAR10",
+    classes = classes, #List with all category names
+    state = [all_activs,all_outputs], #List with neural activity
+    model = model, #Structure describing the model (see documentation)
+    pixel_data = all_images, #Images resized to 32x32 pixels
+    ground_truths = all_cats.numpy().tolist() #Labels
+    )
+test.suffix = None
+test.save()
+# The data is now saved to a file called "CIFAR10.test"
+```
 
-[Read the Python API Documentation here](https://matt-groth-deephys.readthedocs-hosted.com/en/latest/)
+📖 Learn here: 
+
+<a href="https://colab.research.google.com/github/mjgroth/deephys-aio/blob/master/Python_Tutorial.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Demo"/></a>
 
 [![Documentation Status](https://readthedocs.com/projects/matt-groth-deephys/badge/?version=latest&token=993a0e6932110ddd9080ba7fea46fda458721f5293f465bbd55054b94e30f2d9)](https://matt-groth-deephys.readthedocs-hosted.com/en/latest/?badge=latest)
+
+
+
 
 ## How to Report Bugs 🐛
 
