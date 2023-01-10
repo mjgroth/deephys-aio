@@ -8,7 +8,7 @@ This is the code for the paper _________.
 
 1. 📖 Watch crash course on how to use Deephys
 2. Install [precompiled](#precompiled-app-installation) 😎 app
-3. 🔥 [Learn](#-neural-activity-extraction-) to extract neural activity for deephys
+3. 🔥 [Learn](#-neural-activity-extraction-) to extract neural activity for Deephys
 4. 🥳 Let's deephys
 
 
@@ -47,9 +47,9 @@ sub-folders with different datasets and networks. Select one `.model` and visual
 
 [//]: # (  - `CIFARV2.test`)
 
-### This is not hard for me 🤓, let's extract neural activity for deephys 
+### This is not hard for me 🤓, let's extract neural activity for Deephys 
 
-First, extract all the activity and images (size 32x32 pixels) using your favourite ML library. Exporting them to deephys is as simple as this:
+First, extract all the activity and images (size 32x32 pixels) using your favourite ML library. Exporting them to Deephys is as simple as this:
 
 ```python
 import deephys
