@@ -2,7 +2,7 @@
 
 # Deephys
 
-This is the code for the paper ___. This tool is only tested on mac.
+This is the code for the paper ___. This tool is thoroughly tested on silicon MacOS. It is also compatible with intel mac and linux, but not thoroughly tested on these operating systems. 
 
 ## Pre-Compiled App Instructions
 
@@ -21,6 +21,10 @@ If you have already installed a different version, close the app if it is curren
 2. Download the `deephys-mac-intel.zip` from the latest [release](https://github.com/mgroth0/deephy/releases)
 2. Unzip it
 3. Launch with `/usr/local/Cellar/openjdk@17/17.0.5/bin/java deephys.jar` (replace with appropriate JDK)
+
+### Linux Installation
+
+There is currently no pre-compiled release for linux. Please see the [Development Instructions](development-instructions) section below
 
 ## Data Preparation
 
@@ -66,7 +70,7 @@ Follow the demo here to extract neural activity that can be viewed in the app.
 If there is an issue or you have a feature request, please report it in https://deephys.youtrack.cloud/
 
 For bugs, providing certain information will help solve it more quickly. In particular, copying and pasting and command
-line output will help. If you are running from source or on intel, this will be easy since you are already in a command
+line output will help. If you are running from source or on an intel mac, this will be easy since you are already in a command
 line. But on Silicon Mac's running pre-compiled code, there is no console. In order to share console output from the
 pre-compiled app, please do the following:
 
@@ -82,7 +86,7 @@ This is kotlin/gradle project. To compile and run from source requires JDK. If y
 JDK 17 is recommended: We recommend installing openjdk17. Alternatively, JDK 17 corretto, which can be installed through IntelliJ, has worked for some users.
  
 - Mac Installation: [Homebrew](https://brew.sh/) with `brew install openjdk@17`
-- Linux Installation: `sudo apt install openjdk-17-jre-headless`
+- Linux Installation: `sudo apt install openjdk-17-jdk`
 
 
 ### Project Setup
