@@ -79,8 +79,11 @@ This is kotlin/gradle project. To compile and run from source requires JDK. If y
 
 ### JDK Setup
 
-JDK 17 is recommended: We recommend installing openjdk17 via [Homebrew](https://brew.sh/) with `brew install openjdk@17`.
-Alternatively, JDK 17 corretto, which can be installed through IntelliJ, has worked for some users.
+JDK 17 is recommended: We recommend installing openjdk17. Alternatively, JDK 17 corretto, which can be installed through IntelliJ, has worked for some users.
+ 
+- Mac Installation: [Homebrew](https://brew.sh/) with `brew install openjdk@17`
+- Linux Installation: `sudo apt install openjdk-17-jre-headless`
+
 
 ### Project Setup
 
