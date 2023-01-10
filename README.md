@@ -1,6 +1,6 @@
 <!--- https://github.com/mgroth0/deephy -->
 
-# Deephys: Deep Electrophysiology to Debug Deep Nets in OOD Shifts 
+# Deephys: Deep Electrophysiology for OOD 
 
 This is the code for the paper _________. 
 
@@ -30,7 +30,7 @@ This is the code for the paper _________.
 
 ### 🍑 Linux Installation 
 
-There is currently no pre-compiled release for linux. Please see the [Development Instructions](#development-instructions) section below
+There is currently no pre-compiled release for linux. Please see [Development Instructions](https://github.com/mjgroth/deephys-aio/edit/master/README.md#development-instructions-)
 
 ## 🔥🔥🔥 Neural Activity Extraction 🔥🔥🔥
 
@@ -49,7 +49,7 @@ the same `.model` can be viewed together in order to compare the way a single ne
 
 [//]: # (  - `CIFARV2.test`)
 
-### Let's extract neural activity for deephys 🤓 
+### This is not hard for me 🤓, let's extract neural activity for deephys 
 
 Follow the demo here to extract neural activity that can be viewed in the app.
 
