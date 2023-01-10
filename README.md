@@ -47,7 +47,7 @@ sub-folders with different datasets and networks. Select one `.model` and visual
 
 [//]: # (  - `CIFARV2.test`)
 
-### This is not hard for me 🤓, let's extract neural activity for Deephys 
+### 🤓 Extracting neural activity is not hard for me, let's do it and plug it to Deephys 
 
 First, extract all the activity and images (size 32x32 pixels) using your favourite ML library. Exporting them to Deephys is as simple as this:
 
