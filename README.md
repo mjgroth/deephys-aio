@@ -17,14 +17,14 @@ If you have already installed a different version, close the app if it is curren
 
 ### Intel Mac Installation
 
-1. JDK 17 must be installed according to [JDK Setup](jdk-setup)
+1. JDK 17 must be installed according to [JDK Setup](#jdk-setup)
 2. Download the `deephys-mac-intel.zip` from the latest [release](https://github.com/mgroth0/deephy/releases)
 2. Unzip it
 3. Launch with `/usr/local/Cellar/openjdk@17/17.0.5/bin/java deephys.jar` (replace with appropriate JDK)
 
 ### Linux Installation
 
-There is currently no pre-compiled release for linux. Please see the [Development Instructions](development-instructions) section below
+There is currently no pre-compiled release for linux. Please see the [Development Instructions](#development-instructions) section below
 
 ## Data Preparation
 
