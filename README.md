@@ -7,8 +7,8 @@ This is the code for the paper _________.
 ### 🚀 Getting started in 60 seconds:
 
 1. 📖 Watch crash course on how to use Deephys
-2. Install [precompiled](https://github.com/mjgroth/deephys-aio/edit/master/README.md#precompiled-app-installation) 😎 app
-3. 🔥 [Learn](https://github.com/mjgroth/deephys-aio/edit/master/README.md#-neural-activity-extraction-) to extract neural activity for deephys
+2. Install [precompiled](#precompiled-app-installation) 😎 app
+3. 🔥 [Learn](#-neural-activity-extraction-) to extract neural activity for deephys
 4. 🥳 Let's deephys
 
 
@@ -16,7 +16,7 @@ This is the code for the paper _________.
 
 ### 🍏 Silicon Mac 
 
-1. Download `deephys-mac-silicon.zip` from the latest [release](https://github.com/mgroth0/deephy/releases)
+1. Download `deephys-mac-silicon.zip` from the latest [release](https://github.com/mjgroth/deephys/releases/download/1.25.0/deephys-mac-silicon.zip)
 2. Unzip it
 3. Drag the .app file to your Applications folder and overwrite if prompted
 4. Launch by double-clicking the app
@@ -24,13 +24,13 @@ This is the code for the paper _________.
 ###  🍎 Intel Mac Installation
 
 1. JDK 17 must be installed according to [JDK Setup](#jdk-setup)
-2. Download the `deephys-mac-intel.zip` from the latest [release](https://github.com/mgroth0/deephy/releases)
+2. Download the `deephys-mac-intel.zip` from the latest [release](https://github.com/mjgroth/deephys/releases/download/1.25.0/deephys-mac-intel.zip)
 2. Unzip it
 3. Launch with `/usr/local/Cellar/openjdk@17/17.0.5/bin/java deephys.jar` (replace with appropriate JDK)
 
 ### 🍑 Linux Installation 
 
-There is currently no pre-compiled release for linux. Please see [Development Instructions](https://github.com/mjgroth/deephys-aio/edit/master/README.md#development-instructions-)
+There is currently no pre-compiled release for linux. Please see [Development Instructions](#development-instructions-)
 
 ## 🔥🔥🔥 Neural Activity Extraction 🔥🔥🔥
 
@@ -69,7 +69,6 @@ test.save()
 📖 Learn here: 
 
 <a href="https://colab.research.google.com/github/mjgroth/deephys-aio/blob/master/Python_Tutorial.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Demo"/></a>
-
 [![Documentation Status](https://readthedocs.com/projects/matt-groth-deephys/badge/?version=latest&token=993a0e6932110ddd9080ba7fea46fda458721f5293f465bbd55054b94e30f2d9)](https://matt-groth-deephys.readthedocs-hosted.com/en/latest/?badge=latest)
 
 
