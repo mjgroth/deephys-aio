@@ -34,7 +34,7 @@ There is currently no pre-compiled release for linux. Please see [Development In
 
 ## 🔥🔥🔥 Neural Activity Extraction 🔥🔥🔥
 
-### I am feeling lazy 🥱, give me some neural activity
+### 🥱 I am feeling lazy, give me some neural activity
  
 [This Google Drive folder](https://drive.google.com/drive/folders/1755Srmf39sBMjWa_1lEpS-FPo1ANCWFV) contains
 sub-folders with different datasets and networks. Select one `.model` and visualize several `.test` files that correspond to different distributions. 
