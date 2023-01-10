@@ -49,7 +49,16 @@ sub-folders with different datasets and networks. Select one `.model` and visual
 
 ### 🤓 Extracting neural activity is not hard for me, let's do it and plug it to Deephys 
 
-First, extract all the activity and images (size 32x32 pixels) using your favourite ML library. Exporting them to Deephys is as simple as this:
+First, extract all the activity and images (size should be 32x32 pixels) using your favourite ML library. You should obtain the following:
+```python
+    [all_activs,all_outputs] #Lists containing neural activity for intermediate and output layer
+          # each is a multidimensional list of dimensions  [#layers, #neurons, #images]. 
+          #The output layer is always mandatory to be present.
+    all_images #List containing images resized to 32x32 pixels, it has size [#images,#channels,32,32].
+    all_cats #Labels is a 1-dimensional list of ground-truth label number
+```
+
+Then, you can visualize this data in Deephys using just few lines of code:
 
 ```python
 import deephys
