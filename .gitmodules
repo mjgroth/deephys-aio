@@ -100,3 +100,6 @@
 [submodule "k/remote"]
 	path = k/remote
 	url = https://github.com/mgroth0/remote
+[submodule "k/kn"]
+	path = k/kn
+	url = https://github.com/mgroth0/kn
