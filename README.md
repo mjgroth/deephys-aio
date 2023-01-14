@@ -23,14 +23,23 @@ This is the code for the paper _________.
 
 ###  🍎 Intel Mac Installation
 
-1. JDK 17 must be installed according to [JDK Setup](#jdk-setup)
-2. Download the `deephys-mac-intel.zip` from the latest [release](https://github.com/mjgroth/deephys/releases)
+1. Download `deephys-mac-intel.zip` from the latest [release](https://github.com/mjgroth/deephys/releases)
 2. Unzip it
-3. Launch with `/usr/local/Cellar/openjdk@17/17.0.5/bin/java deephys.jar` (replace with appropriate JDK)
+3. Drag the .app file to your Applications folder and overwrite if prompted
+4. Launch by double-clicking the app
 
 ### 🍑 Linux Installation 
 
-There is currently no pre-compiled release for linux. Please see [Development Instructions](#development-instructions-)
+1. Download `deephys.linux_x86_64.zip` or `deephys.linux-arm64.zip` from the latest [release](https://github.com/mjgroth/deephys/releases)
+2. Unzip it
+3. Launch the app by double clicking "deephys/bin/deephys"
+
+### 🍇 Windows 
+
+1. Download `deephys.windows.zip` from the latest [release](https://github.com/mjgroth/deephys/releases)
+2. Unzip it
+3. Launch the app by double clicking "deephys.exe"
+
 
 ## 🔥🔥🔥 Neural Activity Extraction 🔥🔥🔥
 
@@ -105,6 +114,7 @@ JDK 17 is recommended: We recommend installing openjdk17. Alternatively, JDK 17 
  
 - Mac Installation: [Homebrew](https://brew.sh/) with `brew install openjdk@17`
 - Linux Installation: `sudo apt install openjdk-17-jdk`
+- Windows Installation: (TBD)
 
 
 ### Project Setup
