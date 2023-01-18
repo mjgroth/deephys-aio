@@ -476,6 +476,9 @@
   [libraries.github]
     module="org.kohsuke:github-api"
     version="1.313"
+  [libraries.jedis]
+    module="redis.clients:jedis"
+    version="4.3.0"
 [bundles]
   fx-full=[
     "fx-base",
