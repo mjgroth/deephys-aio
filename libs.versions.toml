@@ -2,6 +2,7 @@
   kotlin="1.8.0"
   fx="20-ea+11"
   java="17"
+  java-j-pack="18"
   multik="0.2.1"
   kotlinx-html="0.8.0"
   kotlinx-serialization="1.4.1"
