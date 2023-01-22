@@ -478,7 +478,10 @@
     version="1.313"
   [libraries.jedis]
     module="redis.clients:jedis"
-    version="4.3.0"
+    version="4.3.1"
+  [libraries.lettuce]
+    module="io.lettuce:lettuce-core"
+    version="6.2.2.RELEASE"
 [bundles]
   fx-full=[
     "fx-base",
