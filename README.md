@@ -91,7 +91,7 @@ test.save()
 📖 Learn here: 
 
 <a href="https://colab.research.google.com/github/mjgroth/deephys-aio/blob/master/Python_Tutorial.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Demo"/></a>
-[![Documentation Status](https://readthedocs.com/projects/matt-groth-deephys/badge/?version=latest&token=993a0e6932110ddd9080ba7fea46fda458721f5293f465bbd55054b94e30f2d9)](https://matt-groth-deephys.readthedocs-hosted.com/en/latest/?badge=latest)
+[![Documentation Status](https://readthedocs.org/projects/deephys/badge/?version=latest)](https://deephys.readthedocs.io/en/latest/?badge=latest)
 
 
 
