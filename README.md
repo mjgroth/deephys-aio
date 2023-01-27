@@ -114,6 +114,9 @@ In order for us to most effectively resolve the issue, please provide the follow
 		- Windows: `C:\\Users\<you>\AppData\Roaming\Deephys\Log`
 		- Linux '<your home folder>/.matt/Deephys/Log'
 5. **A complete list of steps in order to reproduce the issue**. Sometimes this is not possible or easy. But if you can tell us, step by step, how to reproduce the error on our end it makes the bug-fixing process much easier.
+	- If you generated your own data (.test and .model files) and you think that the bug has something to do with these files:
+		- please share the files
+		- If possible, please share the code that generated these files. Ideally, share a functional google colab.
 
 The **error output** and **reproduce steps** are the most important. With both of these provided, we can provide a speedy bug-extermination 😳🐛😵
 
