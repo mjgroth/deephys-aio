@@ -67,11 +67,15 @@ First, extract all the activity and images (size should be 32x32 pixels) using y
     all_cats #Labels is a 1-dimensional list of ground-truth label number
 ```
 
+Next, install our pip package. Importantly, the version of the pip package you install must correspond with the app version that you are using. Each app release version says the "Compatible pip package" at the top. Please install that exact version. For example, if you are using app version [1.27.1](https://github.com/mjgroth/deephys/releases/tag/1.27.1), you will need pip version 0.8.6 like so:
+
+`pip install deephys==0.8.6`
+
 Then, you can visualize this data in Deephys using just few lines of code:
 
 ```python
-import deephys
-test = deephys.import_test_data(
+import deephys as dp
+test = dp.import_test_data(
     name = "CIFAR10",
     classes = classes, #List with all category names
     state = [all_activs,all_outputs], #List with neural activity
