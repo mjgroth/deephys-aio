@@ -112,7 +112,7 @@ In order for us to most effectively resolve the issue, please provide the follow
 	- If you cannot open the app, you won't be able to click the button to find the log folder. Here is where you might find it on each os:
 		- Mac: `/Users/<you>/Library/Application Support/Deephys/Log`
 		- Windows: `C:\\Users\<you>\AppData\Roaming\Deephys\Log`
-		- Linux '<your home folder>/.matt/Deephys/Log'
+		- Linux `<your home folder>/.matt/Deephys/Log`
 5. **A complete list of steps in order to reproduce the issue**. Sometimes this is not possible or easy. But if you can tell us, step by step, how to reproduce the error on our end it makes the bug-fixing process much easier.
 	- If you generated your own data (.test and .model files) and you think that the bug has something to do with these files:
 		- please share the files
