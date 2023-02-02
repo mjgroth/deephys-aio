@@ -1,4 +1,6 @@
  <!--- https://github.com/mgroth0/deephy -->
+ 
+[![main](https://github.com/mjgroth/deephys/actions/workflows/main.yml/badge.svg)](https://github.com/mjgroth/deephys/actions/workflows/main.yml)
 
 # Deephys: Deep Electrophysiology for OOD 
 

@@ -41,7 +41,7 @@
       ref="kotlinx-serialization"
   [libraries.kaml]
     module="com.charleskorn.kaml:kaml"
-    version="0.49.0"
+    version="0.51.0"
   [libraries.cbortree]
     module="com.google.iot.cbor:cbor"
     version="0.01.02"
