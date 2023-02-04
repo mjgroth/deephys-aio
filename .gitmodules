@@ -103,3 +103,6 @@
 [submodule "k/kn"]
 	path = k/kn
 	url = https://github.com/mgroth0/kn
+[submodule "k/pip"]
+	path = k/pip
+	url = https://github.com/mgroth0/pip
