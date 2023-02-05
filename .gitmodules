@@ -31,9 +31,6 @@
 [submodule "k/service"]
 	path = k/service
 	url = https://github.com/mgroth0/service
-[submodule "k/key"]
-	path = k/key
-	url = https://github.com/mgroth0/key
 [submodule "k/test"]
 	path = k/test
 	url = https://github.com/mgroth0/test
@@ -88,9 +85,6 @@
 [submodule "k/pref"]
 	path = k/pref
 	url = https://github.com/mgroth0/pref
-[submodule "k/hurricanefx"]
-	path = k/hurricanefx
-	url = https://github.com/mgroth0/hurricanefx
 [submodule "k/fx"]
 	path = k/fx
 	url = https://github.com/mgroth0/fx
