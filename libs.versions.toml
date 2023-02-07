@@ -27,6 +27,8 @@
   smile="2.6.0"
   jProfiler="13.0.4"
   ktoml="0.4.1"
+  log4j="2.14.1"
+  slf4j="2.0.3"
 [libraries]
   [libraries.kotlinx-serialization-core]
     module="org.jetbrains.kotlinx:kotlinx-serialization-core"
@@ -147,19 +149,24 @@
     version="6.1.6"
   [libraries.log4j]
     module="org.apache.logging.log4j:log4j-core"
-    version="2.14.1"
+    [libraries.log4j.version]
+      ref="log4j"
   [libraries.log4jslf4j]
     module="org.apache.logging.log4j:log4j-slf4j18-impl"
-    version="2.14.1"
+    [libraries.log4jslf4j.version]
+      ref="log4j"
   [libraries.slf4j-api]
     module="org.slf4j:slf4j-api"
-    version="1.7.30"
+    [libraries.slf4j-api.version]
+      ref="slf4j"
   [libraries.slf4j-log4j]
     module="org.slf4j:slf4j-log4j12"
-    version="1.7.30"
+    [libraries.slf4j-log4j.version]
+      ref="slf4j"
   [libraries.slf4j-nop]
     module="org.slf4j:slf4j-nop"
-    version="1.8.0-beta4"
+    [libraries.slf4j-nop.version]
+      ref="slf4j"
   [libraries.logback]
     module="ch.qos.logback:logback-classic"
     version="1.2.3"
@@ -209,7 +216,7 @@
     version="0.18.1"
   [libraries.spotify]
     module="se.michaelthelin.spotify:spotify-web-api-java"
-    version="7.1.0"
+    version="7.2.2"
   [libraries.brainflow]
     module="org.brainflow:brainflow"
     version="5.2.1"
