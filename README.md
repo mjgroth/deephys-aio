@@ -2,100 +2,13 @@
  
 [![main](https://github.com/mjgroth/deephys/actions/workflows/main.yml/badge.svg)](https://github.com/mjgroth/deephys/actions/workflows/main.yml)
 
-# Deephys: Deep Electrophysiology for OOD 
+# Deephys: Neural Activity Visualizer
 
 This is the code for the paper _________. 
 
-### 🚀 Getting started in 60 seconds:
+### 🚀 Getting started: [https://deephys.org](https://deephys.org)
 
-1. 📖 Watch crash course on how to use Deephys
-2. Install [precompiled](#precompiled-app-installation) 😎 app
-3. 🔥 [Learn](#-neural-activity-extraction-) to extract neural activity for Deephys
-4. 🥳 Let's deephys
-
-
-## Precompiled App Installation 
-
-### 🍏 Silicon Mac 
-
-1. Download `deephys-mac-silicon.zip` from the latest [release](https://github.com/mjgroth/deephys/releases)
-2. Unzip it
-3. Drag the .app file to your Applications folder and overwrite if prompted
-4. Launch by double-clicking the app
-
-###  🍎 Intel Mac Installation
-
-1. Download `deephys-mac-intel.zip` from the latest [release](https://github.com/mjgroth/deephys/releases)
-2. Unzip it
-3. Drag the .app file to your Applications folder and overwrite if prompted
-4. Launch by double-clicking the app
-
-### 🍑 Linux Installation 
-
-1. Download `deephys.linux_x86_64.zip` or `deephys.linux-arm64.zip` from the latest [release](https://github.com/mjgroth/deephys/releases)
-2. Unzip it
-3. Launch the app by double clicking "deephys/bin/deephys"
-
-### 🍇 Windows 
-
-1. Download `deephys.windows.zip` from the latest [release](https://github.com/mjgroth/deephys/releases)
-2. Unzip it
-3. Launch the app by double clicking "deephys.exe"
-
-
-## 🔥🔥🔥 Neural Activity Extraction 🔥🔥🔥
-
-### 🥱 I am feeling lazy, give me some neural activity
- 
-[This Google Drive folder](https://drive.google.com/drive/folders/1755Srmf39sBMjWa_1lEpS-FPo1ANCWFV) contains
-sub-folders with different datasets and networks. Select one `.model` and visualize several `.test` files that correspond to different distributions. 
-
-[//]: # (from Google Drive)
-
-[//]: # (  - `insert_model_name_here_anirban.model`)
-
-[//]: # (  - `CIFARV1_test.test`)
-
-[//]: # (  - `CIFARV2.test`)
-
-### 🤓 Extracting neural activity is not hard for me, let's do it and plug it to Deephys 
-
-First, extract all the activity and images (size should be 32x32 pixels) using your favourite ML library. You should obtain the following:
-```python
-    [all_activs,all_outputs] #Lists containing neural activity for intermediate and output layer
-          # each is a multidimensional list of dimensions  [#layers, #neurons, #images]. 
-          #The output layer is always mandatory to be present.
-    all_images #List containing images resized to 32x32 pixels, it has size [#images,#channels,32,32].
-    all_cats #Labels is a 1-dimensional list of ground-truth label number
-```
-
-Next, install our pip package. Importantly, the version of the pip package you install must correspond with the app version that you are using. Each app release version says the "Compatible pip package" at the top. Please install that exact version. For example, if you are using app version [1.27.1](https://github.com/mjgroth/deephys/releases/tag/1.27.1), you will need pip version 0.8.6 like so:
-
-`pip install deephys==0.8.6`
-
-Then, you can visualize this data in Deephys using just few lines of code:
-
-```python
-import deephys as dp
-test = dp.import_test_data(
-    name = "CIFAR10",
-    classes = classes, #List with all category names
-    state = [all_activs,all_outputs], #List with neural activity
-    model = model, #Structure describing the model (see documentation)
-    pixel_data = all_images, #Images resized to 32x32 pixels
-    ground_truths = all_cats.numpy().tolist() #Labels
-    )
-test.suffix = None
-test.save()
-# The data is now saved to a file called "CIFAR10.test"
-```
-
-📖 Learn here: 
-
-<a href="https://colab.research.google.com/github/mjgroth/deephys-aio/blob/master/Python_Tutorial.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Demo"/></a>
-[![Documentation Status](https://readthedocs.org/projects/deephys/badge/?version=latest)](https://deephys.readthedocs.io/en/latest/?badge=latest)
-
-
+### 🔥 Importing Neural Activity to Deephys: [![Documentation Status](https://readthedocs.org/projects/deephys/badge/?version=latest)](https://deephys.readthedocs.io/en/latest/?badge=latest) <a href="https://colab.research.google.com/github/mjgroth/deephys-aio/blob/master/Python_Tutorial.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Demo"/></a>
 
 
 ## How to Report Bugs 🐛
