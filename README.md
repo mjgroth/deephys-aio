@@ -2,14 +2,17 @@
  
 [![main](https://github.com/mjgroth/deephys/actions/workflows/main.yml/badge.svg)](https://github.com/mjgroth/deephys/actions/workflows/main.yml)
 
-# Deephys: Neural Activity Visualizer
+# Deephys: Neural Activity Visualizer 
 
 This is the code for the paper _________. 
 
 ### 🚀 Getting started: [https://deephys.org](https://deephys.org)
 
-### 🔥 Importing Neural Activity to Deephys: [![Documentation Status](https://readthedocs.org/projects/deephys/badge/?version=latest)](https://deephys.readthedocs.io/en/latest/?badge=latest) <a href="https://colab.research.google.com/github/mjgroth/deephys-aio/blob/master/Python_Tutorial.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Demo"/></a>
+## 🔥🔥🔥 Neural Activity Extraction 🔥🔥🔥
 
+### 🥱 I am feeling lazy, give me some neural activity
+
+### 🔥 Importing Neural Activity to Deephys: [![Documentation Status](https://readthedocs.org/projects/deephys/badge/?version=latest)](https://deephys.readthedocs.io/en/latest/?badge=latest) <a href="https://colab.research.google.com/github/mjgroth/deephys-aio/blob/master/Python_Tutorial.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Demo"/></a>
 
 ## How to Report Bugs 🐛
 
