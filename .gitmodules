@@ -67,9 +67,6 @@
 [submodule "k/mstruct"]
 	path = k/mstruct
 	url = https://github.com/mgroth0/mstruct
-[submodule "k/auto"]
-	path = k/auto
-	url = https://github.com/mgroth0/auto
 [submodule "k/exec"]
 	path = k/exec
 	url = https://github.com/mgroth0/exec
