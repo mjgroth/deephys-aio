@@ -97,6 +97,3 @@
 [submodule "k/pip"]
 	path = k/pip
 	url = https://github.com/mgroth0/pip
-[submodule "k/image"]
-	path = k/image
-	url = https://github.com/mgroth0/image
