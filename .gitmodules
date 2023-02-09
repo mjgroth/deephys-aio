@@ -64,9 +64,6 @@
 [submodule "k/http"]
 	path = k/http
 	url = https://github.com/mgroth0/http
-[submodule "k/conda"]
-	path = k/conda
-	url = https://github.com/mgroth0/conda
 [submodule "k/mstruct"]
 	path = k/mstruct
 	url = https://github.com/mgroth0/mstruct
@@ -97,3 +94,6 @@
 [submodule "k/pip"]
 	path = k/pip
 	url = https://github.com/mgroth0/pip
+[submodule "k/image"]
+	path = k/image
+	url = https://github.com/mgroth0/image
