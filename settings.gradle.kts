@@ -35,7 +35,7 @@ return "$group:$name:$version"
 }
 val depsSeen  = mutableListOf<Dep>()
 listOf("kbuild").forEach { gradleMod ->
-val kbuildVersion  = "1676304738624"
+val kbuildVersion  = "1676304920416"
 val mattCacheFolder  = rootDir.resolve(".gradle").resolve("matt")
 val downloadedKbuildVersionFile  = mattCacheFolder.resolve("kbuildVersion.txt")
 val kbuildLibsFolder  = mattCacheFolder.resolve("lib")
