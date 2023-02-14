@@ -1,11 +1,11 @@
 [versions]
-  kotlin="1.8.10"
+  kotlin="1.8.20-Beta"
   fx="20-ea+11"
   java="17"
   java-j-pack="18"
   multik="0.2.1"
   kotlinx-html="0.8.0"
-  kotlinx-serialization="1.4.1"
+  kotlinx-serialization="1.5.0-RC"
   xmlutil="0.84.3"
   gradle="8.0-rc-1"
   gradleTooling="7.5.1"
@@ -23,7 +23,7 @@
   gradlePluginPublish="1.1.0"
   google-auth="1.8.1"
   python="3.10.4"
-  jupiter="5.9.1"
+  jupiter="5.9.2"
   smile="2.6.0"
   jProfiler="13.0.4"
   ktoml="0.4.1"
@@ -446,7 +446,7 @@
       ref="jupiter"
   [libraries.annotations]
     module="org.jetbrains:annotations"
-    version="13.0"
+    version="24.0.0"
   [libraries.jupiter-engine]
     module="org.junit.jupiter:junit-jupiter-engine"
     [libraries.jupiter-engine.version]
