@@ -3,7 +3,7 @@
   fx="20-ea+11"
   java="17"
   java-j-pack-non-windows="17"
-  java-j-pack-windows="18"
+  java-j-pack-windows="17"
   multik="0.2.1"
   kotlinx-html="0.8.0"
   kotlinx-serialization="1.5.0-RC"
