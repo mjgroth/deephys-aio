@@ -500,6 +500,9 @@
   [libraries.lettuce]
     module="io.lettuce:lettuce-core"
     version="6.2.2.RELEASE"
+  [libraries.sodium]
+    module="com.ionspin.kotlin:multiplatform-crypto-libsodium-bindings"
+    version="0.8.8"
 [bundles]
   fx-full=[
     "fx-base",
