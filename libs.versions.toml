@@ -299,6 +299,10 @@
     module="io.ktor:ktor-server-html-builder"
     [libraries.ktorHTMLDSL.version]
       ref="ktor"
+  [libraries.ktorStatusPages]
+    module="io.ktor:ktor-server-status-pages"
+    [libraries.ktorStatusPages.version]
+      ref="ktor"
   [libraries.kotlindl-api]
     module="org.jetbrains.kotlinx:kotlin-deeplearning-api"
     [libraries.kotlindl-api.version]
@@ -503,6 +507,9 @@
   [libraries.sodium]
     module="com.ionspin.kotlin:multiplatform-crypto-libsodium-bindings"
     version="0.8.8"
+  [libraries.java-mail]
+    module="javax.mail:mail"
+    version="1.4.7"
 [bundles]
   fx-full=[
     "fx-base",
