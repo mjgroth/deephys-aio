@@ -10,7 +10,7 @@
   xmlutil="0.84.3"
   gradle="8.0-rc-1"
   gradleTooling="7.5.1"
-  ktor="2.1.3"
+  ktor="2.2.3"
   tf="0.4.0"
   kotlindl="0.4.0"
   libtensorflow="1.15.0"
@@ -302,6 +302,10 @@
   [libraries.ktorStatusPages]
     module="io.ktor:ktor-server-status-pages"
     [libraries.ktorStatusPages.version]
+      ref="ktor"
+  [libraries.ktorServerAuth]
+    module="io.ktor:ktor-server-auth"
+    [libraries.ktorServerAuth.version]
       ref="ktor"
   [libraries.kotlindl-api]
     module="org.jetbrains.kotlinx:kotlin-deeplearning-api"
