@@ -295,6 +295,14 @@
     module="io.ktor:ktor-client-cio"
     [libraries.ktorClientCio.version]
       ref="ktor"
+  [libraries.ktorClientJava]
+    module="io.ktor:ktor-client-java"
+    [libraries.ktorClientJava.version]
+      ref="ktor"
+  [libraries.ktorClientJS]
+    module="io.ktor:ktor-client-js"
+    [libraries.ktorClientJS.version]
+      ref="ktor"
   [libraries.ktorHTMLDSL]
     module="io.ktor:ktor-server-html-builder"
     [libraries.ktorHTMLDSL.version]
