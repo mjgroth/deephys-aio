@@ -522,6 +522,9 @@
   [libraries.java-mail]
     module="javax.mail:mail"
     version="1.4.7"
+  [libraries.selenium]
+    module="org.seleniumhq.selenium:selenium-java"
+    version="4.8.1"
 [bundles]
   fx-full=[
     "fx-base",
