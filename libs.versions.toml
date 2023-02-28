@@ -8,6 +8,7 @@
   kotlinx-html="0.8.0"
   kotlinx-serialization="1.5.0-RC"
   xmlutil="0.84.3"
+  coroutines="1.6.4"
   gradle="8.0-rc-1"
   gradleTooling="7.5.1"
   ktor="2.2.3"
@@ -59,7 +60,12 @@
     version="0.01.02"
   [libraries.kotlinx-coroutines]
     module="org.jetbrains.kotlinx:kotlinx-coroutines-core"
-    version="1.6.4"
+    [libraries.kotlinx-coroutines.version]
+      ref="coroutines"
+  [libraries.kotlinx-coroutines-test]
+    module="org.jetbrains.kotlinx:kotlinx-coroutines-test"
+    [libraries.kotlinx-coroutines-test.version]
+      ref="coroutines"
   [libraries.kotlinx-multik-default]
     module="org.jetbrains.kotlinx:multik-default"
     [libraries.kotlinx-multik-default.version]
@@ -290,6 +296,10 @@
   [libraries.ktorClientCore]
     module="io.ktor:ktor-client-core"
     [libraries.ktorClientCore.version]
+      ref="ktor"
+  [libraries.ktorClientLogging]
+    module="io.ktor:ktor-client-logging"
+    [libraries.ktorClientLogging.version]
       ref="ktor"
   [libraries.ktorClientCio]
     module="io.ktor:ktor-client-cio"
