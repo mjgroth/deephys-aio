@@ -44,6 +44,9 @@
     module="org.jetbrains.kotlinx:kotlinx-serialization-cbor"
     [libraries.kotlinx-serialization-cbor.version]
       ref="kotlinx-serialization"
+  [libraries.kotlinx-serialization-csv]
+    module="app.softwork:kotlinx-serialization-csv"
+    version="0.0.11"
   [libraries.kaml]
     module="com.charleskorn.kaml:kaml"
     version="0.51.0"
@@ -321,9 +324,25 @@
     module="io.ktor:ktor-server-status-pages"
     [libraries.ktorStatusPages.version]
       ref="ktor"
+  [libraries.ktorServerResources]
+    module="io.ktor:ktor-server-resources"
+    [libraries.ktorServerResources.version]
+      ref="ktor"
   [libraries.ktorServerAuth]
     module="io.ktor:ktor-server-auth"
     [libraries.ktorServerAuth.version]
+      ref="ktor"
+  [libraries.ktorServerContent]
+    module="io.ktor:ktor-server-content-negotiation"
+    [libraries.ktorServerContent.version]
+      ref="ktor"
+  [libraries.ktorJson]
+    module="io.ktor:ktor-serialization-kotlinx-json"
+    [libraries.ktorJson.version]
+      ref="ktor"
+  [libraries.ktorCbor]
+    module="io.ktor:ktor-serialization-kotlinx-cbor"
+    [libraries.ktorCbor.version]
       ref="ktor"
   [libraries.kotlindl-api]
     module="org.jetbrains.kotlinx:kotlin-deeplearning-api"
