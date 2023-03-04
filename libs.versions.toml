@@ -296,6 +296,14 @@
     module="io.ktor:ktor-server-netty"
     [libraries.ktorServerNetty.version]
       ref="ktor"
+  [libraries.ktorServerHttpRedirect]
+    module="io.ktor:ktor-server-http-redirect"
+    [libraries.ktorServerHttpRedirect.version]
+      ref="ktor"
+  [libraries.ktorServerForwardedHeader]
+    module="io.ktor:ktor-server-forwarded-header"
+    [libraries.ktorServerForwardedHeader.version]
+      ref="ktor"
   [libraries.ktorClientCore]
     module="io.ktor:ktor-client-core"
     [libraries.ktorClientCore.version]
