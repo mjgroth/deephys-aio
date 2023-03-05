@@ -31,6 +31,7 @@
   ktoml="0.4.1"
   log4j="2.14.1"
   slf4j="2.0.3"
+  selenium="4.8.1"
 [libraries]
   [libraries.kotlinx-serialization-core]
     module="org.jetbrains.kotlinx:kotlinx-serialization-core"
@@ -559,9 +560,22 @@
   [libraries.java-mail]
     module="javax.mail:mail"
     version="1.4.7"
+  [libraries.selenium-devtools-v85]
+    module="org.seleniumhq.selenium:selenium-devtools-v85"
+    [libraries.selenium-devtools-v85.version]
+      ref="selenium"
+  [libraries.selenium-chrome-driver]
+    module="org.seleniumhq.selenium:selenium-chrome-driver"
+    [libraries.selenium-chrome-driver.version]
+      ref="selenium"
+  [libraries.selenium-support]
+    module="org.seleniumhq.selenium:selenium-support"
+    [libraries.selenium-support.version]
+      ref="selenium"
   [libraries.selenium]
     module="org.seleniumhq.selenium:selenium-java"
-    version="4.8.1"
+    [libraries.selenium.version]
+      ref="selenium"
 [bundles]
   fx-full=[
     "fx-base",
