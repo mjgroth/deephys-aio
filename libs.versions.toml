@@ -560,9 +560,9 @@
   [libraries.java-mail]
     module="javax.mail:mail"
     version="1.4.7"
-  [libraries.selenium-devtools-v85]
-    module="org.seleniumhq.selenium:selenium-devtools-v85"
-    [libraries.selenium-devtools-v85.version]
+  [libraries.selenium-devtools-v108]
+    module="org.seleniumhq.selenium:selenium-devtools-v108"
+    [libraries.selenium-devtools-v108.version]
       ref="selenium"
   [libraries.selenium-chrome-driver]
     module="org.seleniumhq.selenium:selenium-chrome-driver"
