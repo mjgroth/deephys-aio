@@ -549,6 +549,9 @@
   [libraries.amazons3]
     module="com.amazonaws:aws-java-sdk-s3"
     version="1.12.336"
+  [libraries.amazons3-kotlin]
+    module="aws.sdk.kotlin:s3"
+    version="0.21.1-beta"
   [libraries.jaxb]
     module="javax.xml.bind:jaxb-api"
     version="2.3.1"
