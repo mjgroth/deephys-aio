@@ -1,15 +1,15 @@
 [versions]
-  kotlin="1.8.20-Beta"
+  kotlin="1.8.20-RC"
   fx="20-ea+11"
   java="17"
   java-j-pack-non-windows="17"
   java-j-pack-windows="17"
   multik="0.2.1"
   kotlinx-html="0.8.0"
-  kotlinx-serialization="1.5.0-RC"
+  kotlinx-serialization="1.5.0"
   xmlutil="0.84.3"
-  coroutines="1.6.4"
-  gradle="8.0-rc-1"
+  coroutines="1.7.0-Beta"
+  gradle="8.0.2"
   gradleTooling="7.5.1"
   ktor="2.2.4"
   tf="0.4.0"
@@ -33,6 +33,7 @@
   slf4j="2.0.3"
   logback="1.4.5"
   selenium="4.8.1"
+  atomifcfuPlugin="0.20.0"
 [libraries]
   [libraries.kotlinx-serialization-core]
     module="org.jetbrains.kotlinx:kotlinx-serialization-core"
@@ -71,6 +72,13 @@
     module="org.jetbrains.kotlinx:kotlinx-coroutines-test"
     [libraries.kotlinx-coroutines-test.version]
       ref="coroutines"
+  [libraries.kotlinx-coroutines-reactive]
+    module="org.jetbrains.kotlinx:kotlinx-coroutines-reactive"
+    [libraries.kotlinx-coroutines-reactive.version]
+      ref="coroutines"
+  [libraries.atomicfu]
+    module="org.jetbrains.kotlin:atomicfu"
+    version="1.6.21"
   [libraries.kotlinx-multik-default]
     module="org.jetbrains.kotlinx:multik-default"
     [libraries.kotlinx-multik-default.version]
@@ -569,7 +577,7 @@
     version="4.3.1"
   [libraries.lettuce]
     module="io.lettuce:lettuce-core"
-    version="6.2.2.RELEASE"
+    version="6.2.3.RELEASE"
   [libraries.sodium]
     module="com.ionspin.kotlin:multiplatform-crypto-libsodium-bindings"
     version="0.8.8"
@@ -663,6 +671,10 @@
     id="com.gradle.plugin-publish"
     [plugins.pluginPublish.version]
       ref="gradlePluginPublish"
+  [plugins.atomicfu]
+    id="kotlinx-atomicfu"
+    [plugins.atomicfu.version]
+      ref="atomifcfuPlugin"
 [metadata]
   "org.jetbrains.kotlin:kotlin-gradle-plugin"=""
   "org.jetbrains.intellij.plugins:gradle-intellij-plugin"="org.jetbrains.intellij"
@@ -672,3 +684,4 @@
   "com.dorongold.plugins:task-tree"="com.dorongold.task-tree"
   "org.jetbrains.kotlin:kotlin-serialization"="org.jetbrains.kotlin.plugin.serialization"
   "com.gradle.publish:plugin-publish-plugin"="com.gradle.plugin-publish"
+  "org.jetbrains.kotlinx:atomicfu-gradle-plugin"="kotlinx-atomicfu"
