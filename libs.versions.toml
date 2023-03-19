@@ -671,9 +671,9 @@
     id="com.gradle.plugin-publish"
     [plugins.pluginPublish.version]
       ref="gradlePluginPublish"
-  [plugins.atomicfu]
+  [plugins.atomicfuGradlePlugin]
     id="kotlinx-atomicfu"
-    [plugins.atomicfu.version]
+    [plugins.atomicfuGradlePlugin.version]
       ref="atomifcfuPlugin"
 [metadata]
   "org.jetbrains.kotlin:kotlin-gradle-plugin"=""
