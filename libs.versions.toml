@@ -79,6 +79,10 @@
   [libraries.atomicfu]
     module="org.jetbrains.kotlin:atomicfu"
     version="1.6.21"
+  [libraries.atomicfu-runtime]
+    module="org.jetbrains.kotlin:kotlinx-atomicfu-runtime"
+    [libraries.atomicfu-runtime.version]
+      ref="kotlin"
   [libraries.kotlinx-multik-default]
     module="org.jetbrains.kotlinx:multik-default"
     [libraries.kotlinx-multik-default.version]
