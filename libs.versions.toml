@@ -34,6 +34,9 @@
   logback="1.4.5"
   selenium="4.8.1"
   atomifcfuPlugin="0.20.0"
+  android="7.4.1"
+  androidSDK="33"
+  androidAppCompat="1.6.1"
 [libraries]
   [libraries.kotlinx-serialization-core]
     module="org.jetbrains.kotlinx:kotlinx-serialization-core"
@@ -682,6 +685,18 @@
     id="kotlinx-atomicfu"
     [plugins.atomicfuGradlePlugin.version]
       ref="atomifcfuPlugin"
+  [plugins.androidApp]
+    id="com.android.application"
+    [plugins.androidApp.version]
+      ref="android"
+  [plugins.androidLib]
+    id="com.android.library"
+    [plugins.androidLib.version]
+      ref="android"
+  [plugins.jetbrainsKotlinAndroid]
+    id="org.jetbrains.kotlin.android"
+    [plugins.jetbrainsKotlinAndroid.version]
+      ref="kotlin"
 [metadata]
   "org.jetbrains.kotlin:kotlin-gradle-plugin"=""
   "org.jetbrains.intellij.plugins:gradle-intellij-plugin"="org.jetbrains.intellij"
@@ -692,3 +707,5 @@
   "org.jetbrains.kotlin:kotlin-serialization"="org.jetbrains.kotlin.plugin.serialization"
   "com.gradle.publish:plugin-publish-plugin"="com.gradle.plugin-publish"
   "org.jetbrains.kotlinx:atomicfu-gradle-plugin"="kotlinx-atomicfu"
+  "com.android.application:com.android.application.gradle.plugin"="com.android.application"
+  "com.android.library:com.android.library.gradle.plugin"="com.android.library"
