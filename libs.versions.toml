@@ -616,6 +616,18 @@
   [libraries.tink]
     module="com.google.crypto.tink:tink"
     version="1.7.0"
+  [libraries.androidApp]
+    module="com.android.application:com.android.application.gradle.plugin"
+    [libraries.androidApp.version]
+      ref="android"
+  [libraries.androidLib]
+    module="com.android.library:com.android.library.gradle.plugin"
+    [libraries.androidLib.version]
+      ref="android"
+  [libraries.jetbrainsKotlinAndroid]
+    module="org.jetbrains.kotlin:kotlin-gradle-plugin"
+    [libraries.jetbrainsKotlinAndroid.version]
+      ref="kotlin"
 [bundles]
   fx-full=[
     "fx-base",
