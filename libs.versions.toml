@@ -34,7 +34,7 @@
   logback="1.4.5"
   selenium="4.8.1"
   atomifcfuPlugin="0.20.0"
-  android="7.4.2"
+  android="7.4.0"
   androidSDK="33"
   androidAppCompat="1.6.1"
   androidx-activity-compose="1.7.0"
