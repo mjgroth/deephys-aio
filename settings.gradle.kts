@@ -35,7 +35,7 @@ return "$group:$name:$version"
 }
 val depsSeen  = mutableListOf<Dep>()
 listOf("kbuild").forEach { gradleMod ->
-val kbuildVersion  = "1680050621978"
+val kbuildVersion  = "1680068539499"
 val mattCacheFolder  = rootDir.resolve(".gradle").resolve("matt")
 val downloadedKbuildVersionFile  = mattCacheFolder.resolve("kbuildVersion.txt")
 val kbuildLibsFolder  = mattCacheFolder.resolve("lib")
@@ -52,11 +52,11 @@ if (mattCacheFolder.exists()) mattCacheFolder.deleteRecursively()
 kbuildLibsFolder.mkdirs()
   
 println("Downloading Kbuild...")
-val kbuildURL = "https://matt-central.nyc3.digitaloceanspaces.com//1/kbuild/$kbuildVersion/files.lsv"
+val kbuildURL = "https://nyc3.digitaloceanspaces.com/1/kbuild/$kbuildVersion/files.lsv"
 println("getting list of raw files...")
-val rawFilesText = readBytesFromURL("https://matt-central.nyc3.digitaloceanspaces.com//1/kbuild/$kbuildVersion/files.lsv").decodeToString()
+val rawFilesText = readBytesFromURL("https://nyc3.digitaloceanspaces.com/1/kbuild/$kbuildVersion/files.lsv").decodeToString()
 println("getting list of refs...")
-val refsText = readBytesFromURL("https://matt-central.nyc3.digitaloceanspaces.com//1/kbuild/$kbuildVersion/refs.csv").decodeToString()
+val refsText = readBytesFromURL("https://nyc3.digitaloceanspaces.com/1/kbuild/$kbuildVersion/refs.csv").decodeToString()
 
 
 println("downloading raw files...")
@@ -64,7 +64,7 @@ println("downloading raw files...")
 
 rawFilesText.lines().filter{it.isNotBlank()}.forEach {
 	println("downloading " + it.trim() + "...")
-	val url = "https://matt-central.nyc3.digitaloceanspaces.com//1/kbuild/$kbuildVersion/${it.trim()}"
+	val url = "https://nyc3.digitaloceanspaces.com/1/kbuild/$kbuildVersion/$%7Bit.trim()%7D"
 	val os = kbuildLibsFolder.resolve(it.trim()).outputStream()
 	os.write(readBytesFromURL(url))
 	os.close()
