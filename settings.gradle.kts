@@ -83,7 +83,7 @@ buildscript {
         val realPluginsList = pluginsList.map {
             val name = it.substringAfter(">").trim()
             Plugin(name).apply {
-                val attrsString = it.substringBefore("<")
+                val attrsString = it.substringBefore(">")
                 if ("version" in attrsString) {
                     var gettingCloser = attrsString.substringAfter("version").substringAfter("=")
                     if ("apply" in gettingCloser) {
