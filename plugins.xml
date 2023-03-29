@@ -1,9 +1,3 @@
 <plugins>
     <plugin version="1680117924561">kbuild</plugin>
-    <plugin>bootstrap</plugin>
-    <plugin>ideplug</plugin>
-    <plugin>android</plugin>
-    <plugin>inspect</plugin>
-    <plugin>codegen</plugin>
-    <plugin>admin</plugin>
 </plugins>

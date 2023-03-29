@@ -100,8 +100,7 @@ buildscript {
             }
         }
 
-        realPluginsList.filter { it.name.isNotBlank() }.forEach { gradleMod ->
-            println("gradleMod: ${gradleMod.name}")
+        realPluginsList.forEach { gradleMod ->
             val kbuildLibsFolder = if (gradleMod.version == null) {
                 val kbuildDir = registeredDir.resolve("gbuild/dist/${gradleMod.name}")
                 val numBack = prop("NUM_BACK").toInt()
