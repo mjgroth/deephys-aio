@@ -10,7 +10,7 @@ buildscript {
     val props by lazy {
         java.util.Properties().apply {
             load(
-                    sourceFile!!.parentFile.resolve("gradle.properties").reader()
+                sourceFile!!.parentFile.resolve("gradle.properties").reader()
             )
         }
     }
@@ -24,14 +24,14 @@ buildscript {
         maven(url = "https://maven.pkg.jetbrains.space/public/p/compose/dev")
     }/*this is necessary for libs.xmlutil.core and libs.xmlutil.serialization*/
     val androidAttribute = Attribute.of(
-            "net.devrieze.android",
-            Boolean::class.javaObjectType
+        "net.devrieze.android",
+        Boolean::class.javaObjectType
     )
     configurations.all {
         attributes {
             attribute(
-                    androidAttribute,
-                    false
+                androidAttribute,
+                false
             )
         }
     }
@@ -44,9 +44,9 @@ buildscript {
         val registeredDir = userHomeFolder.resolve("registered")
 
         class Dep(
-                val group: String,
-                val name: String,
-                val version: String
+            val group: String,
+            val name: String,
+            val version: String
         ) {
 
             override fun toString(): String {
@@ -62,8 +62,8 @@ buildscript {
         val content = xml.substringAfter(">").substringBeforeLast("<")
         var pluginsList = content.split("</")
         pluginsList = pluginsList.subList(
-                0,
-                pluginsList.size - 1
+            0,
+            pluginsList.size - 1
         )
         pluginsList = pluginsList.map {
             if (it.count { it == '>' } == 2) {
@@ -76,8 +76,8 @@ buildscript {
         }
 
         class Plugin(
-                val name: String,
-                var version: String? = null
+            val name: String,
+            var version: String? = null
         )
 
         val realPluginsList = pluginsList.map {
@@ -90,11 +90,11 @@ buildscript {
                         gettingCloser = gettingCloser.substringBefore("apply")
                     }
                     version = gettingCloser.replace(
-                            "\"",
-                            ""
+                        "\"",
+                        ""
                     ).replace(
-                            "'",
-                            ""
+                        "'",
+                        ""
                     ).trim()
                 }
             }
@@ -133,14 +133,19 @@ buildscript {
                     myKbuildLibFolder.mkdirs()
 
                     println("Downloading Kbuild...")
-                    val kbuildURL =
-                        "https://matt-central.nyc3.digitaloceanspaces.com//1/${gradleMod.name}/$kbuildVersion/files.lsv"
+
+                    val mcVersion = 0
+
+                    val host = "https://matt-central.nyc3.digitaloceanspaces.com/"
+
+                    val artifactURL = "$host/$mcVersion/${gradleMod.name}/$kbuildVersion"
+
                     println("getting list of raw files...")
                     val rawFilesText =
-                        readBytesFromURL("https://matt-central.nyc3.digitaloceanspaces.com//1/${gradleMod.name}/$kbuildVersion/files.lsv").decodeToString()
+                        readBytesFromURL("$artifactURL/files.lsv").decodeToString()
                     println("getting list of refs...")
                     val refsText =
-                        readBytesFromURL("https://matt-central.nyc3.digitaloceanspaces.com//1/${gradleMod.name}/$kbuildVersion/refs.csv").decodeToString()
+                        readBytesFromURL("$artifactURL/refs.csv").decodeToString()
 
 
                     println("downloading raw files...")
@@ -148,8 +153,7 @@ buildscript {
 
                     rawFilesText.lines().filter { it.isNotBlank() }.forEach {
                         println("downloading " + it.trim() + "...")
-                        val url =
-                            "https://matt-central.nyc3.digitaloceanspaces.com//1/${gradleMod.name}/$kbuildVersion/${it.trim()}"
+                        val url = "$artifactURL/${it.trim()}"
                         val os = myKbuildLibFolder.resolve(it.trim()).outputStream()
                         os.write(readBytesFromURL(url))
                         os.close()
@@ -157,7 +161,7 @@ buildscript {
                     refsText.lines().filter { it.isNotBlank() }.forEach {
                         val fileName = it.substringBefore(",")
                         val url = it.substringAfter(",")
-                        println("downloading " + fileName + "...")
+                        println("downloading $fileName...")
                         val os = myKbuildLibFolder.resolve(fileName).outputStream()
                         os.write(readBytesFromURL(url))
                         os.close()
@@ -172,9 +176,9 @@ buildscript {
                 val deps = myKbuildLibFolder.resolve("deps.txt").readLines().filter { it.isNotBlank() }.map {
                     val parts = it.split(":")
                     Dep(
-                            parts[0],
-                            parts[1],
-                            parts[2]
+                        parts[0],
+                        parts[1],
+                        parts[2]
                     )
                 }
                 deps.forEach { dep ->
@@ -198,9 +202,9 @@ buildscript {
             val deps = depsText.readLines().filter { it.isNotBlank() }.map {
                 val parts = it.split(":")
                 Dep(
-                        parts[0],
-                        parts[1],
-                        parts[2]
+                    parts[0],
+                    parts[1],
+                    parts[2]
                 )
             }
             deps.forEach { dep ->
@@ -241,5 +245,5 @@ for (i in 0 until childs.length) {
 val plugins = java.util.ServiceLoader.load(MySettingsPlugin::class.java).stream().map { it.get() }.toList()
 pluginsToApply.forEach { modName ->
     plugins.firstOrNull { it.modName == modName }?.applyTo(settings)
-    ?: println("WARNING: could not find plugin $modName")
+        ?: println("WARNING: could not find plugin $modName")
 }
