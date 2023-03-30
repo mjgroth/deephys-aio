@@ -138,7 +138,7 @@ buildscript {
 
                     val host = "https://matt-central.nyc3.digitaloceanspaces.com/"
 
-                    val artifactURL = "$host/$mcVersion/${gradleMod.name}/$kbuildVersion"
+                    val artifactURL = "$host/$mcVersion/versioned/${gradleMod.name}/$kbuildVersion"
 
                     println("getting list of raw files...")
                     val rawFilesText =
