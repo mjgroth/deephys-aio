@@ -136,7 +136,7 @@ buildscript {
 
                     val mcVersion = 0
 
-                    val host = "https://matt-central.us-east-2.amazonaws.com/"
+                    val host = "https://matt-central.s3.us-east-2.amazonaws.com/"
 
                     val artifactURL = "$host/$mcVersion/versioned/${gradleMod.name}/$kbuildVersion"
 
