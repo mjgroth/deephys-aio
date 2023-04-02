@@ -737,6 +737,9 @@
   [libraries.coil-compose]
     module="io.coil-kt:coil-compose"
     version="2.3.0"
+  [libraries.compose-image-loader]
+    module="io.github.qdsfdhvh:image-loader"
+    version="1.2.10"
 [bundles]
   fx-full=[
     "fx-base",
