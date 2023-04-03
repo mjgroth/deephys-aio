@@ -740,6 +740,9 @@
   [libraries.compose-image-loader]
     module="io.github.qdsfdhvh:image-loader"
     version="1.2.10"
+  [libraries.jgit]
+    module="org.eclipse.jgit:org.eclipse.jgit"
+    version="6.5.0.202303070854-r"
 [bundles]
   fx-full=[
     "fx-base",
