@@ -226,7 +226,9 @@ buildscript {
 
 val dbFactory: DocumentBuilderFactory = DocumentBuilderFactory.newInstance()
 val dBuilder: DocumentBuilder = dbFactory.newDocumentBuilder()
-val doc: Document = dBuilder.parse(settings.rootDir.resolve("plugins.xml"))
+
+val xmlFile = settings.rootDir.resolve("plugins.xml")
+val doc: Document = dBuilder.parse(xmlFile)
 val rootElement: Element = doc.documentElement
 rootElement.normalize()
 val pluginsToApply = mutableListOf<String>()
