@@ -64,9 +64,6 @@
 [submodule "k/http"]
 	path = k/http
 	url = https://github.com/mgroth0/http
-[submodule "k/mstruct"]
-	path = k/mstruct
-	url = https://github.com/mgroth0/mstruct
 [submodule "k/exec"]
 	path = k/exec
 	url = https://github.com/mgroth0/exec
@@ -91,3 +88,6 @@
 [submodule "k/image"]
 	path = k/image
 	url = https://github.com/mgroth0/image
+[submodule "k/rstruct"]
+	path = k/rstruct
+	url = https://github.com/mgroth0/rstruct
