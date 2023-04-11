@@ -59,7 +59,10 @@ buildscript {
         val pluginsXMLFile = settings.rootDir.resolve("plugins.xml")
 
         val xml = pluginsXMLFile.readText()
-        val content = xml.substringAfter(">").substringBeforeLast("<")
+        val content = xml.substringAfter(">").substringBeforeLast("<").replace(
+            Regex("<!--(.+?)-->"),
+            ""
+        )
         var pluginsList = content.split("</")
         pluginsList = pluginsList.subList(
             0,

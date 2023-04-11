@@ -841,3 +841,11 @@
   "com.android.application:com.android.application.gradle.plugin"="com.android.application"
   "com.android.library:com.android.library.gradle.plugin"="com.android.library"
   "org.jetbrains.compose:compose-gradle-plugin"="org.jetbrains.compose"
+  [metadata.python]
+    requests="requests"
+    aiohttp="aiohttp"
+    tqdm="tqdm"
+    cbor="cbor2"
+    np="numpy"
+    torch="torch"
+    torchvision="torchvision"
