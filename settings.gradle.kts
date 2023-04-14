@@ -249,6 +249,13 @@ for (i in 0 until childs.length) {
 
 val plugins = java.util.ServiceLoader.load(MySettingsPlugin::class.java).stream().map { it.get() }.toList()
 pluginsToApply.forEach { modName ->
-    plugins.firstOrNull { it.modName == modName }?.applyTo(settings)
-        ?: println("WARNING: could not find plugin $modName")
+
+    val thePlugin = plugins.firstOrNull { it.modName == modName }
+
+    if (thePlugin == null) {
+        println("WARNING: could not find plugin $modName")
+    } else {
+        thePlugin.applyTo(settings)
+    }
+
 }
