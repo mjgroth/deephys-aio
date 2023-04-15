@@ -49,6 +49,7 @@
   compose-compiler="1.4.5"
   composePlugin="1.4.0"
   androidx-lifecycle="2.6.1"
+  koverPluginVersion="0.7.0-Alpha"
 [libraries]
   [libraries.kotlinx-serialization-core]
     module="org.jetbrains.kotlinx:kotlinx-serialization-core"
@@ -752,6 +753,10 @@
     module="org.jetbrains.kotlin:kotlin-sam-with-receiver"
     [libraries.samWithReceiver.version]
       ref="kotlin"
+  [libraries.kover]
+    module="org.jetbrains.kotlinx:kover-gradle-plugin"
+    [libraries.kover.version]
+      ref="koverPluginVersion"
 [bundles]
   fx-full=[
     "fx-base",
@@ -845,6 +850,10 @@
     id="org.jetbrains.kotlin.plugin.sam.with.receiver"
     [plugins.samWithReceiver.version]
       ref="kotlin"
+  [plugins.kover]
+    id="org.jetbrains.kotlinx.kover"
+    [plugins.kover.version]
+      ref="koverPluginVersion"
 [metadata]
   "org.jetbrains.kotlin:kotlin-gradle-plugin"=""
   "org.jetbrains.intellij.plugins:gradle-intellij-plugin"="org.jetbrains.intellij"
@@ -857,6 +866,7 @@
   "org.jetbrains.kotlinx:atomicfu-gradle-plugin"="kotlinx-atomicfu"
   "com.android.application:com.android.application.gradle.plugin"="com.android.application"
   "com.android.library:com.android.library.gradle.plugin"="com.android.library"
+  "org.jetbrains.kotlinx:kover-gradle-plugin"="org.jetbrains.kotlinx.kover"
   "org.jetbrains.compose:compose-gradle-plugin"="org.jetbrains.compose"
   "org.gradle.kotlin:gradle-kotlin-dsl-plugins"="org.gradle.kotlin.kotlin-dsl"
   "org.jetbrains.kotlin:kotlin-sam-with-receiver"="org.jetbrains.kotlin.plugin.sam.with.receiver"
