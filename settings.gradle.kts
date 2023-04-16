@@ -231,7 +231,8 @@ buildscript {
 val startTime = System.currentTimeMillis()
 
 /*https://docs.gradle.org/8.1/userguide/configuration_cache.html*/
-enableFeaturePreview("STABLE_CONFIGURATION_CACHE")
+/*AGP 7.4.2 is not ready*/
+/*enableFeaturePreview("STABLE_CONFIGURATION_CACHE")*/
 
 val dbFactory: DocumentBuilderFactory = DocumentBuilderFactory.newInstance()
 val dBuilder: DocumentBuilder = dbFactory.newDocumentBuilder()
