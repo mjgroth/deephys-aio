@@ -231,7 +231,7 @@ buildscript {
 val startTime = System.currentTimeMillis()
 
 /*https://docs.gradle.org/8.1/userguide/configuration_cache.html*/
-//enableFeaturePreview("STABLE_CONFIGURATION_CACHE")
+enableFeaturePreview("STABLE_CONFIGURATION_CACHE")
 
 val dbFactory: DocumentBuilderFactory = DocumentBuilderFactory.newInstance()
 val dBuilder: DocumentBuilder = dbFactory.newDocumentBuilder()
