@@ -2,6 +2,7 @@ import matt.kbuild.glang.settings.MySettingsPlugin
 import org.w3c.dom.Document
 import org.w3c.dom.Element
 import org.w3c.dom.Node
+import org.w3c.dom.NodeList
 import javax.xml.parsers.DocumentBuilder
 import javax.xml.parsers.DocumentBuilderFactory
 
@@ -227,6 +228,11 @@ buildscript {
 
 }
 
+val startTime = System.currentTimeMillis()
+
+/*https://docs.gradle.org/8.1/userguide/configuration_cache.html*/
+//enableFeaturePreview("STABLE_CONFIGURATION_CACHE")
+
 val dbFactory: DocumentBuilderFactory = DocumentBuilderFactory.newInstance()
 val dBuilder: DocumentBuilder = dbFactory.newDocumentBuilder()
 
@@ -235,7 +241,7 @@ val doc: Document = dBuilder.parse(xmlFile)
 val rootElement: Element = doc.documentElement
 rootElement.normalize()
 val pluginsToApply = mutableListOf<String>()
-val childs = rootElement.childNodes
+val childs: NodeList = rootElement.childNodes
 for (i in 0 until childs.length) {
     val n = childs.item(i)
     if (n!!.nodeType == Node.ELEMENT_NODE) {
@@ -247,7 +253,8 @@ for (i in 0 until childs.length) {
     }
 }
 
-val plugins = java.util.ServiceLoader.load(MySettingsPlugin::class.java).stream().map { it.get() }.toList()
+val plugins: List<MySettingsPlugin> =
+    java.util.ServiceLoader.load(MySettingsPlugin::class.java).stream().map { it.get() }.toList()
 pluginsToApply.forEach { modName ->
 
     val thePlugin = plugins.firstOrNull { it.modName == modName }
@@ -255,7 +262,7 @@ pluginsToApply.forEach { modName ->
     if (thePlugin == null) {
         println("WARNING: could not find plugin $modName")
     } else {
-        thePlugin.applyTo(settings)
+        thePlugin.applyTo(settings, startTime)
     }
 
 }
