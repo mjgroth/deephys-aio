@@ -228,7 +228,7 @@ buildscript {
 
 }
 
-val startTime = System.currentTimeMillis()
+/*val startTime = System.currentTimeMillis()*/
 
 /*https://docs.gradle.org/8.1/userguide/configuration_cache.html*/
 /*AGP 7.4.2 is not ready*/
@@ -263,7 +263,7 @@ pluginsToApply.forEach { modName ->
     if (thePlugin == null) {
         println("WARNING: could not find plugin $modName")
     } else {
-        thePlugin.applyTo(settings, startTime)
+        thePlugin.applyTo(settings/*, startTime*/)
     }
 
 }
