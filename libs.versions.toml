@@ -882,3 +882,4 @@
     np="numpy"
     torch="torch"
     torchvision="torchvision"
+    cpuinfo="py-cpuinfo"
