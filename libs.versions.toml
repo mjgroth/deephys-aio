@@ -18,7 +18,7 @@
   libtensorflow="1.15.0"
   ktlint="0.49.0"
   jGraphT="1.5.1"
-  shadowPluginVersion="7.1.2"
+  shadowPluginVersion="8.1.1"
   gradleEnterprisePluginVersion="3.12"
   taskTreeVersion="2.1.0"
   jPackage="1.5.2"
@@ -437,7 +437,7 @@
     module="org.apache.maven.shared:maven-dependency-analyzer"
     version="1.12.0"
   [libraries.gradle-plugin-shadow]
-    module="gradle.plugin.com.github.johnrengelman:shadow"
+    module="com.github.johnrengelman:shadow"
     [libraries.gradle-plugin-shadow.version]
       ref="shadowPluginVersion"
   [libraries.gradle-plugin-enterprise]
