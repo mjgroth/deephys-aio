@@ -36,7 +36,7 @@
   log4j="2.14.1"
   slf4j="2.0.3"
   logback="1.4.5"
-  selenium="4.8.1"
+  selenium="4.9.0"
   atomifcfuPlugin="0.20.0"
   android="7.4.2"
   androidSDK="33"
@@ -398,6 +398,10 @@
     module="io.ktor:ktor-serialization-kotlinx-cbor"
     [libraries.ktorCbor.version]
       ref="ktor"
+  [libraries.ktorUtil]
+    module="io.ktor:ktor-utils"
+    [libraries.ktorUtil.version]
+      ref="ktor"
   [libraries.kotlindl-api]
     module="org.jetbrains.kotlinx:kotlin-deeplearning-api"
     [libraries.kotlindl-api.version]
@@ -615,9 +619,9 @@
   [libraries.java-mail]
     module="javax.mail:mail"
     version="1.4.7"
-  [libraries.selenium-devtools-v108]
-    module="org.seleniumhq.selenium:selenium-devtools-v108"
-    [libraries.selenium-devtools-v108.version]
+  [libraries.selenium-devtools]
+    module="org.seleniumhq.selenium:selenium-devtools-v112"
+    [libraries.selenium-devtools.version]
       ref="selenium"
   [libraries.selenium-chrome-driver]
     module="org.seleniumhq.selenium:selenium-chrome-driver"
