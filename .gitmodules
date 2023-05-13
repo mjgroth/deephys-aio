@@ -91,3 +91,9 @@
 [submodule "k/rstruct"]
 	path = k/rstruct
 	url = https://github.com/mgroth0/rstruct
+[submodule "k/socket"]
+	path = k/socket
+	url = https://github.com/mgroth0/socket
+[submodule "k/shell"]
+	path = k/shell
+	url = https://github.com/mgroth0/shell
