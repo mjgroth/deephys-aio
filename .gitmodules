@@ -79,9 +79,6 @@
 [submodule "k/fx"]
 	path = k/fx
 	url = https://github.com/mgroth0/fx
-[submodule "k/kjlib"]
-	path = k/kjlib
-	url = https://github.com/mgroth0/kjlib
 [submodule "k/image"]
 	path = k/image
 	url = https://github.com/mgroth0/image
