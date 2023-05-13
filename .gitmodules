@@ -82,9 +82,6 @@
 [submodule "k/kjlib"]
 	path = k/kjlib
 	url = https://github.com/mgroth0/kjlib
-[submodule "k/remote"]
-	path = k/remote
-	url = https://github.com/mgroth0/remote
 [submodule "k/image"]
 	path = k/image
 	url = https://github.com/mgroth0/image
